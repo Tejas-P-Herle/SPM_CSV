@@ -1,0 +1,19 @@
+{% extends "layout.html"%}
+{% block title %}{{ errorTitle }}{% endblock %}
+{% block bodyClass %}"container"{% endblock %}
+{% block body %}
+<style>
+    #copyright {
+        position: absolute;
+        bottom: 0;
+    }
+    label {
+        font-size: 1.5pc;
+    }
+</style>
+<h2 id='error' style="text-align: center;">{{ errorMsg }}</h2>
+<div id='errorDiv'></div>
+<script>
+	let error = new ErrorObj('{{ errorNo }}', 'errorDiv');
+</script>
+{% endblock %}
